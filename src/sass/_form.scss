@@ -4,6 +4,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
+  z-index: 3;
 }
 
 .container {
@@ -22,7 +23,7 @@ input {
   outline: none;
 }
 
-button {
+.button {
   position: absolute;
   border: none;
   top: 0px;
