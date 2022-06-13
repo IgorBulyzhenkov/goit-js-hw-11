@@ -1,2 +1,0 @@
-!function(){"?key=2".concat("26673038-cabd68481316a87c43ed4c613","&q=").concat("https://pixabay.com","&image_type=photo&orientation=horizontal&safesearch=true");document.querySelector("#search-form").addEventListener("submit",(function(e){e.preventDefault(),console.log(e.target.elements.searchQuery.value);var t=e.target.elements.searchQuery.value;console.log(t)}))}();
-//# sourceMappingURL=index.3599ab19.js.map
