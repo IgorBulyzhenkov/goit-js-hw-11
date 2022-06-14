@@ -1,6 +1,6 @@
 .gallery {
-  padding-top: 75px;
-  width: 1600px;
+  padding-top: 115px;
+  width: 1500px;
   margin: 0 auto;
 }
 
@@ -25,14 +25,38 @@
   }
 }
 
+.gallery-list__item:hover {
+  box-shadow: 0 0 15px 4px rgba(3, 27, 62, 0.782);
+}
+
 img {
   width: 100%;
   height: 250px;
+  transition: transform 700ms ease-out;
+}
+img:hover {
+  transform: scale(1.15);
 }
 
 .info {
   display: flex;
+  justify-content: center;
 }
 .info-item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.load-more{
+  
 }
