@@ -6,8 +6,6 @@ const { btnEl, textEl } = getRefs();
 export function noMorePages(response) {
   const currentPage = page;
   const totalPages = Math.ceil(response.totalHits / parePage);
-  console.log(currentPage);
-  console.log(totalPages);
   if (currentPage === totalPages) {
     btnEl.classList.add('hidden');
     textInAnEnd();
