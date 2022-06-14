@@ -5,7 +5,6 @@ import { getRefs } from './js/refs';
 import { renderCardsMarkup } from './js/render-markup';
 import { fetchImages } from './js/fetch-img';
 import { noMorePages } from './js/service';
-import { onClickMoreImg } from './js/btn-more-image';
 
 const { formEl, galleryEl, btnEl, textEl } = getRefs();
 
@@ -59,6 +58,22 @@ async function getUserValue(e) {
   }
 }
 
+
+async function onClickMoreImg() {
+  try {
+    if (page !== null) {
+      page += 1;
+      console.log(page);
+      const userValue = await fetchImages(nameImg);
+      const userData = userValue.data;
+      renderCardsMarkup(userData.hits);
+      noMorePages(userData);
+      Lightbox.refresh();
+    }
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
 
 
