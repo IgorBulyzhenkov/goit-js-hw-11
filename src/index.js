@@ -8,10 +8,21 @@ import { noMorePages } from './js/service';
 
 const { formEl, galleryEl, btnEl, textEl } = getRefs();
 
-let Lightbox = null;
 let page = null;
 let nameImg = '';
 const parePage = 40;
+
+const Lightbox = new SimpleLightbox('.gallery a', {
+  captionSelector: 'img',
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  animationSpeed: 250,
+  preloading: false,
+  docClose: false,
+  widthRatio: 1,
+  doubleTapZoom: 1.5,
+});
 
 btnEl.classList.add('hidden');
 
@@ -42,17 +53,7 @@ async function getUserValue(e) {
     btnEl.classList.remove('hidden');
     noMorePages(userData);
 
-    Lightbox = new SimpleLightbox('.gallery a', {
-      captionSelector: 'img',
-      captionsData: 'alt',
-      captionPosition: 'bottom',
-      captionDelay: 250,
-      animationSpeed: 250,
-      preloading: false,
-      docClose: false,
-      widthRatio: 1,
-      doubleTapZoom: 1.5,
-    });
+    Lightbox.refresh()
   } catch (error) {
     console.log(error.message);
   }
