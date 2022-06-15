@@ -51,15 +51,15 @@ img:hover {
   flex-direction: column;
 }
 
-.info-list:not(:last-child) {
-  margin-right: 15px;
-}
-
 .info-text {
   margin-top: 10px;
   margin-bottom: 0;
   font-size: unset;
   font-weight: 700;
+}
+
+.span{
+  font-weight: 400;
 }
 
 .load-more {

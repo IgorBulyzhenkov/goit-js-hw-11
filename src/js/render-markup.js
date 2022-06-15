@@ -20,20 +20,20 @@ export function renderCardsMarkup(result) {
           </a>
           <ul class="info">
             <li class="info-list">
-              <p class="info-text">Likes :</p>
-              <span>${likes}</span>
+              <p class="info-text">Likes
+              <span class="span">${likes}</span></p>
             </li>
             <li class="info-list">
-              <p class="info-text">Views :</p>
-              <span>${views}</span>
+              <p class="info-text">Views
+              <span class="span">${views}</span></p>
             </li>
             <li class="info-list">
-              <p class="info-text">Comments :</p>
-              <span>${comments}</span>
+              <p class="info-text">Comments
+              <span class="span">${comments}</span></p>
             </li>
             <li class="info-list">
-              <p class="info-text">Downloads :</p>
-              <span>${downloads}</span>
+              <p class="info-text">Downloads
+              <span class="span">${downloads}</span></p>
             </li>
           </ul>
         </div></li>`
