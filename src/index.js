@@ -31,6 +31,7 @@ btnEl.addEventListener('click', onClickMoreImg);
 
 async function getUserValue(e) {
   e.preventDefault();
+  galleryEl.innerHTML = '';
   nameImg = e.target.elements.searchQuery.value.trim();
   if (!nameImg) return;
   page = 1;
@@ -44,7 +45,6 @@ async function getUserValue(e) {
       );
     }
 
-    galleryEl.innerHTML = '';
     textEl.innerHTML = '';
 
     Notify.success(`Hooray! We found ${userData.totalHits} images.`);
@@ -53,12 +53,11 @@ async function getUserValue(e) {
     btnEl.classList.remove('hidden');
     noMorePages(userData);
 
-    Lightbox.refresh()
+    Lightbox.refresh();
   } catch (error) {
     console.log(error.message);
   }
 }
-
 
 async function onClickMoreImg() {
   try {
@@ -75,6 +74,4 @@ async function onClickMoreImg() {
   }
 }
 
-
-
-export { parePage, page, nameImg};
+export { parePage, page, nameImg };
