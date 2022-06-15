@@ -63,7 +63,6 @@ async function onClickMoreImg() {
   try {
     if (page !== null) {
       page += 1;
-      console.log(page);
       const userValue = await fetchImages(nameImg);
       const userData = userValue.data;
       renderCardsMarkup(userData.hits);
@@ -77,4 +76,4 @@ async function onClickMoreImg() {
 
 
 
-export { parePage, page, nameImg, Lightbox };
+export { parePage, page, nameImg};
