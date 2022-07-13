@@ -33,7 +33,14 @@ async function getUserValue(e) {
   e.preventDefault();
   galleryEl.innerHTML = '';
   nameImg = e.target.elements.searchQuery.value.trim();
-  if (!nameImg) return;
+
+  if (!nameImg) {
+    Notify.failure(
+      'Sorry, there are no images matching your search query. Please try again.'
+    );
+    btnEl.classList.add('hidden');
+    return;
+  }
   page = 1;
 
   try {
